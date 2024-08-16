@@ -1,9 +1,12 @@
 @forward "./variables/color";
 @forward "./variables/z-index";
 @forward "./variables/breakpoint";
+@forward "./variables/typography";
 
 @forward "./theme/theme";
 
 @forward "./base/normalize";
 @forward "./base/reset";
 @forward "./base/global";
+
+@forward "./mixin/font";

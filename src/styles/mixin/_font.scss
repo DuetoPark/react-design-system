@@ -1,0 +1,199 @@
+@use "../variables/typography" as *;
+@use "../theme/theme";
+
+// font(style, weight, color);
+
+@mixin display-1() {
+  font-size: $font-display-1-size;
+  line-height: $font-display-1-lineHeight;
+  letter-spaceing: $font-display-1-letterSpacing;
+}
+
+@mixin display-2() {
+  font-size: $font-display-2-size;
+  line-height: $font-display-2-lineHeight;
+  letter-spaceing: $font-display-2-letterSpacing;
+}
+
+@mixin title-1() {
+  font-size: $font-title-1-size;
+  line-height: $font-title-1-lineHeight;
+  letter-spaceing: $font-title-1-letterSpacing;
+}
+
+@mixin title-2() {
+  font-size: $font-title-2-size;
+  line-height: $font-title-2-lineHeight;
+  letter-spaceing: $font-title-2-letterSpacing;
+}
+
+@mixin title-3() {
+  font-size: $font-title-3-size;
+  line-height: $font-title-3-lineHeight;
+  letter-spaceing: $font-title-3-letterSpacing;
+}
+
+@mixin heading-1() {
+  font-size: $font-heading-1-size;
+  line-height: $font-heading-1-lineHeight;
+  letter-spaceing: $font-heading-1-letterSpacing;
+}
+
+@mixin heading-2() {
+  font-size: $font-heading-2-size;
+  line-height: $font-heading-2-lineHeight;
+  letter-spaceing: $font-heading-2-letterSpacing;
+}
+
+@mixin headline-1() {
+  font-size: $font-headline-1-size;
+  line-height: $font-headline-1-lineHeight;
+  letter-spaceing: $font-headline-1-letterSpacing;
+}
+
+@mixin headline-2() {
+  font-size: $font-headline-2-size;
+  line-height: $font-headline-2-lineHeight;
+  letter-spaceing: $font-headline-2-letterSpacing;
+}
+
+@mixin body-1-normal() {
+  font-size: $font-body-1-normal-size;
+  line-height: $font-body-1-normal-lineHeight;
+  letter-spaceing: $font-body-1-normal-letterSpacing;
+}
+
+@mixin body-1-reading() {
+  font-size: $font-body-1-reading-size;
+  line-height: $font-body-1-reading-lineHeight;
+  letter-spaceing: $font-body-1-reading-letterSpacing;
+}
+
+@mixin body-2-normal() {
+  font-size: $font-body-2-normal-size;
+  line-height: $font-body-2-normal-lineHeight;
+  letter-spaceing: $font-body-2-normal-letterSpacing;
+}
+
+@mixin body-2-reading() {
+  font-size: $font-body-2-reading-size;
+  line-height: $font-body-2-reading-lineHeight;
+  letter-spaceing: $font-body-2-reading-letterSpacing;
+}
+
+@mixin label-1-normal() {
+  font-size: $font-label-1-normal-size;
+  line-height: $font-label-1-normal-lineHeight;
+  letter-spaceing: $font-label-1-normal-letterSpacing;
+}
+
+@mixin label-1-reading() {
+  font-size: $font-label-1-reading-size;
+  line-height: $font-label-1-reading-lineHeight;
+  letter-spaceing: $font-label-1-reading-letterSpacing;
+}
+
+@mixin label-2() {
+  font-size: $font-label-2-size;
+  line-height: $font-label-2-lineHeight;
+  letter-spaceing: $font-label-2-letterSpacing;
+}
+
+@mixin caption-1() {
+  font-size: $font-caption-1-size;
+  line-height: $font-caption-1-lineHeight;
+  letter-spaceing: $font-caption-1-letterSpacing;
+}
+
+@mixin caption-2() {
+  font-size: $font-caption-2-size;
+  line-height: $font-caption-2-lineHeight;
+  letter-spaceing: $font-caption-2-letterSpacing;
+}
+
+$weight-map: (
+  bold: $font-weight-bold,
+  medium: $font-weight-medium,
+  regular: $font-weight-regular,
+);
+
+@function _get-weight-value($key) {
+  @return map-get($weight-map, $key);
+}
+
+@mixin font($style: "body-1", $weight: "regular", $color: var(--label-strong)) {
+  @if ($style == "display-1") {
+    @include display-1();
+  }
+
+  @if ($style == "display-2") {
+    @include display-2();
+  }
+
+  @if ($style == "title-1") {
+    @include title-1();
+  }
+
+  @if ($style == "title-2") {
+    @include title-2();
+  }
+
+  @if ($style == "title-3") {
+    @include title-3();
+  }
+
+  @if ($style == "heading-1") {
+    @include heading-1();
+  }
+
+  @if ($style == "heading-2") {
+    @include heading-2();
+  }
+
+  @if ($style == "headline-1") {
+    @include headline-1();
+  }
+
+  @if ($style == "headline-2") {
+    @include headline-2();
+  }
+
+  @if ($style == "body-1-normal") {
+    @include body-1-normal();
+  }
+
+  @if ($style == "body-1-reading") {
+    @include body-1-reading();
+  }
+
+  @if ($style == "body-2-normal") {
+    @include body-2-normal();
+  }
+
+  @if ($style == "body-2-reading") {
+    @include body-2-reading();
+  }
+
+  @if ($style == "label-1-normal") {
+    @include label-1-normal();
+  }
+
+  @if ($style == "label-1-reading") {
+    @include label-1-reading();
+  }
+
+  @if ($style == "label-2") {
+    @include label-2();
+  }
+
+  @if ($style == "caption-1") {
+    @include caption-1();
+  }
+
+  @if ($style == "caption-2") {
+    @include caption-2();
+  }
+
+  font-weight: _get-weight-value($weight);
+  color: $color;
+}
