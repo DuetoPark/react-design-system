@@ -1,0 +1,59 @@
+@use "../variables/color" as *;
+
+$static-white-light: $common-100;
+$static-black-light: $common-0;
+
+$primary-normal-light: $blue-50;
+$primary-strong-light: $blue-45;
+$primary-heavy-light: $blue-40;
+
+$label-normal-light: $coolNeutral-10;
+$label-strong-light: $common-0;
+$label-neutral-light: rgba($coolNeutral-22, $opacity-88);
+$label-alternative-light: rgba($coolNeutral-25, $opacity-61);
+$label-assistive-light: rgba($coolNeutral-25, $opacity-28);
+$label-disable-light: rgba($coolNeutral-25, $opacity-16);
+
+$background-normal-normal-light: $common-100;
+$background-normal-alternative-light: $coolNeutral-99;
+$background-elevated-normal-light: $common-100;
+$background-elevated-alternative-light: $coolNeutral-99;
+
+$interaction-inactive-light: $coolNeutral-70;
+$interaction-disable-light: $coolNeutral-98;
+
+$line-normal-normal-light: rgba($coolNeutral-50, $opacity-22);
+$line-normal-neutral-light: rgba($coolNeutral-50, $opacity-16);
+$line-normal-alternative-light: rgba($coolNeutral-50, $opacity-8);
+$line-solid-normal-light: $coolNeutral-96;
+$line-solid-neutral-light: $coolNeutral-97;
+$line-solid-alternative-light: $coolNeutral-98;
+
+$status-positive-light: $green-50;
+$status-cautionary-light: $orange-50;
+$status-negative-light: $red-50;
+
+$accent-lime-light: $lime-50;
+$accent-cyan-light: $cyan-50;
+$accent-lightBlue-light: $lightBlue-50;
+$accent-violet-light: $violet-50;
+$accent-purple-light: $purple-50;
+$accent-pink-light: $pink-50;
+
+$inverse-primary-light: $blue-60;
+$inverse-background-light: $coolNeutral-15;
+$inverse-label-light: $coolNeutral-99;
+
+$component-fill-normal-light: rgba($coolNeutral-50, $opacity-8);
+$component-fill-strong-light: rgba($coolNeutral-50, $opacity-16);
+$component-fill-alternative-light: rgba($coolNeutral-50, $opacity-5);
+$component-material-dimmer-light: rgba($coolNeutral-10, $opacity-52);
+
+$shadow-normal-light: 0px 1px 2px rgba(0, 0, 0, 0.12),
+  0px 0px 1px rgba(0, 0, 0, 0.08), 0px 0px 1px rgba(0, 0, 0, 0.08);
+$shadow-emphasize-light: 0px 2px 8px rgba(0, 0, 0, 0.12),
+  0px 1px 4px rgba(0, 0, 0, 0.08), 0px 0px 1px rgba(0, 0, 0, 0.08);
+$shadow-strong-light: 0px 6px 12px rgba(0, 0, 0, 0.12),
+  0px 4px 8px rgba(0, 0, 0, 0.08), 0px 0px 4px rgba(0, 0, 0, 0.08);
+$shadow-heavy-light: 0px 16px 20px rgba(0, 0, 0, 0.12),
+  0px 8px 16px rgba(0, 0, 0, 0.08), 0px 0px 8px rgba(0, 0, 0, 0.08);

@@ -1,0 +1,114 @@
+@use "./light" as *;
+@use "./dark" as *;
+
+html[data-theme="light"] {
+  --static-white: #{$static-white-light};
+  --static-black: #{$static-black-light};
+
+  --primary-normal: #{$primary-normal-light};
+  --primary-strong: #{$primary-strong-light};
+  --primary-heavy: #{$primary-heavy-light};
+
+  --label-normal: #{$label-normal-light};
+  --label-strong: #{$label-strong-light};
+  --label-neutral: #{$label-neutral-light};
+  --label-alternative: #{$label-alternative-light};
+  --label-assistive: #{$label-assistive-light};
+  --label-disable: #{$label-disable-light};
+
+  --background-normal-normal: #{$background-normal-normal-light};
+  --background-normal-alternative: #{$background-normal-alternative-light};
+  --background-elevated-normal: #{$background-elevated-normal-light};
+  --background-elevated-alternative: #{$background-elevated-alternative-light};
+
+  --interaction-inactive: #{$interaction-inactive-light};
+  --interaction-disable: #{$interaction-disable-light};
+
+  --line-normal-normal: #{$line-normal-normal-light};
+  --line-normal-neutral: #{$line-normal-neutral-light};
+  --line-normal-alternative: #{$line-normal-alternative-light};
+  --line-solid-normal: #{$line-solid-normal-light};
+  --line-solid-neutral: #{$line-solid-neutral-light};
+  --line-solid-alternative: #{$line-solid-alternative-light};
+
+  --status-positive: #{$status-positive-light};
+  --status-cautionary: #{$status-cautionary-light};
+  --status-negative: #{$status-negative-light};
+
+  --accent-lime: #{$accent-lime-light};
+  --accent-cyan: #{$accent-cyan-light};
+  --accent-lightBlue: #{$accent-lightBlue-light};
+  --accent-violet: #{$accent-violet-light};
+  --accent-purple: #{$accent-purple-light};
+  --accent-pink: #{$accent-pink-light};
+
+  --inverse-primary: #{$inverse-primary-light};
+  --inverse-background: #{$inverse-background-light};
+  --inverse-label: #{$inverse-label-light};
+
+  --component-fill-normal: #{$component-fill-normal-light};
+  --component-fill-strong: #{$component-fill-strong-light};
+  --component-fill-alternative: #{$component-fill-alternative-light};
+  --component-material-dimmer: #{$component-material-dimmer-light};
+
+  --shadow-normal: #{$shadow-normal-light};
+  --shadow-emphasize: #{$shadow-emphasize-light};
+  --shadow-strong: #{$shadow-strong-light};
+  --shadow-heavy: #{$shadow-heavy-light};
+}
+
+html[data-theme="dark"] {
+  --static-white: #{$static-white-dark};
+  --static-black: #{$static-black-dark};
+
+  --primary-normal: #{$primary-normal-dark};
+  --primary-strong: #{$primary-strong-dark};
+  --primary-heavy: #{$primary-heavy-dark};
+
+  --label-normal: #{$label-normal-dark};
+  --label-strong: #{$label-strong-dark};
+  --label-neutral: #{$label-neutral-dark};
+  --label-alternative: #{$label-alternative-dark};
+  --label-assistive: #{$label-assistive-dark};
+  --label-disable: #{$label-disable-dark};
+
+  --background-normal-normal: #{$background-normal-normal-dark};
+  --background-normal-alternative: #{$background-normal-alternative-dark};
+  --background-elevated-normal: #{$background-elevated-normal-dark};
+  --background-elevated-alternative: #{$background-elevated-alternative-dark};
+
+  --interaction-inactive: #{$interaction-inactive-dark};
+  --interaction-disable: #{$interaction-disable-dark};
+
+  --line-normal-normal: #{$line-normal-normal-dark};
+  --line-normal-neutral: #{$line-normal-neutral-dark};
+  --line-normal-alternative: #{$line-normal-alternative-dark};
+  --line-solid-normal: #{$line-solid-normal-dark};
+  --line-solid-neutral: #{$line-solid-neutral-dark};
+  --line-solid-alternative: #{$line-solid-alternative-dark};
+
+  --status-positive: #{$status-positive-dark};
+  --status-cautionary: #{$status-cautionary-dark};
+  --status-negative: #{$status-negative-dark};
+
+  --accent-lime: #{$accent-lime-dark};
+  --accent-cyan: #{$accent-cyan-dark};
+  --accent-lightBlue: #{$accent-lightBlue-dark};
+  --accent-violet: #{$accent-violet-dark};
+  --accent-purple: #{$accent-purple-dark};
+  --accent-pink: #{$accent-pink-dark};
+
+  --inverse-primary: #{$inverse-primary-dark};
+  --inverse-background: #{$inverse-background-dark};
+  --inverse-label: #{$inverse-label-dark};
+
+  --component-fill-normal: #{$component-fill-normal-dark};
+  --component-fill-strong: #{$component-fill-strong-dark};
+  --component-fill-alternative: #{$component-fill-alternative-dark};
+  --component-material-dimmer: #{$component-material-dimmer-dark};
+
+  --shadow-normal: #{$shadow-normal-dark};
+  --shadow-emphasize: #{$shadow-emphasize-dark};
+  --shadow-strong: #{$shadow-strong-dark};
+  --shadow-heavy: #{$shadow-heavy-dark};
+}

@@ -1,0 +1,62 @@
+@use "../variables/color" as *;
+
+$static-white-dark: $common-100;
+$static-black-dark: $common-0;
+
+$primary-normal-dark: $blue-60;
+$primary-strong-dark: $blue-55;
+$primary-heavy-dark: $blue-50;
+
+$label-normal-dark: $coolNeutral-99;
+$label-strong-dark: $common-100;
+$label-neutral-dark: rgba($coolNeutral-90, $opacity-88);
+$label-alternative-dark: rgba($coolNeutral-80, $opacity-61);
+$label-assistive-dark: rgba($coolNeutral-80, $opacity-28);
+$label-disable-dark: rgba($coolNeutral-70, $opacity-16);
+
+$background-normal-normal-dark: $coolNeutral-15;
+$background-normal-alternative-dark: $coolNeutral-5;
+$background-elevated-normal-dark: $coolNeutral-17;
+$background-elevated-alternative-dark: $coolNeutral-7;
+
+$interaction-inactive-dark: $coolNeutral-40;
+$interaction-disable-dark: $coolNeutral-22;
+
+$line-normal-normal-dark: rgba($coolNeutral-50, $opacity-32);
+$line-normal-neutral-dark: rgba($coolNeutral-50, $opacity-28);
+$line-normal-alternative-dark: rgba($coolNeutral-50, $opacity-22);
+$line-solid-normal-dark: $coolNeutral-25;
+$line-solid-neutral-dark: $coolNeutral-23;
+$line-solid-alternative-dark: $coolNeutral-22;
+
+$status-positive-dark: $green-60;
+$status-cautionary-dark: $orange-60;
+$status-negative-dark: $red-60;
+
+$accent-lime-dark: $lime-60;
+$accent-cyan-dark: $cyan-60;
+$accent-lightBlue-dark: $lightBlue-60;
+$accent-violet-dark: $violet-60;
+$accent-purple-dark: $purple-60;
+$accent-pink-dark: $pink-60;
+
+$inverse-primary-dark: $blue-50;
+$inverse-background-dark: $common-100;
+$inverse-label-dark: $coolNeutral-10;
+
+$component-fill-normal-dark: rgba($coolNeutral-50, $opacity-22);
+$component-fill-strong-dark: rgba($coolNeutral-50, $opacity-28);
+$component-fill-alternative-dark: rgba($coolNeutral-50, $opacity-12);
+$component-material-dimmer-dark: rgba($coolNeutral-10, $opacity-74);
+
+$shadow-normal-dark: 0px 1px 2px rgba(0, 0, 0, 0.12),
+  0px 0px 1px rgba(0, 0, 0, 0.08), 0px 0px 1px rgba(0, 0, 0, 0.08);
+
+$shadow-emphasize-dark: 0px 2px 8px rgba(0, 0, 0, 0.12),
+  0px 1px 4px rgba(0, 0, 0, 0.08), 0px 0px 1px rgba(0, 0, 0, 0.08);
+
+$shadow-strong-dark: 0px 6px 12px rgba(0, 0, 0, 0.12),
+  0px 4px 8px rgba(0, 0, 0, 0.08), 0px 0px 4px rgba(0, 0, 0, 0.08);
+
+$shadow-heavy-dark: 0px 16px 20px rgba(0, 0, 0, 0.12),
+  0px 8px 16px rgba(0, 0, 0, 0.08), 0px 0px 8px rgba(0, 0, 0, 0.08);
