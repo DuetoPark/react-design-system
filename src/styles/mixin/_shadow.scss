@@ -1,0 +1,5 @@
+@use "../theme/color";
+
+@mixin shadow($type) {
+  box-shadow: var(--shadow-#{$type});
+}
