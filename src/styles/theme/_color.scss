@@ -1,5 +1,5 @@
-@use "./light" as *;
-@use "./dark" as *;
+@use "./color-light" as *;
+@use "./color-dark" as *;
 
 html[data-theme="light"] {
   --static-white: #{$static-white-light};
