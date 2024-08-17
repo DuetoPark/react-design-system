@@ -121,7 +121,7 @@ $weight-map: (
   @return map-get($weight-map, $key);
 }
 
-@mixin font($style: "body-1", $weight: "regular", $color: var(--label-strong)) {
+@mixin font($style: "body-1", $weight: "regular", $color: var(--static-black)) {
   @if ($style == "display-1") {
     @include display-1();
   }
