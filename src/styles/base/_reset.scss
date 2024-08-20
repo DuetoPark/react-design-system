@@ -85,6 +85,10 @@ select:focus {
   box-shadow: none;
 }
 
+button:disabled {
+  cursor: not-allowed;
+}
+
 img {
   display: block;
   width: 100%;
