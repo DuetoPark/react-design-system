@@ -1,44 +1,38 @@
 @use "../../styles/index.scss" as *;
 @use "../../styles/theme/color-light" as *;
-
-$interaction-primary-bg: $primary-normal-light;
-$interaction-secondary-bg: $label-normal-light;
+@use "../../styles/theme/color-dark" as *;
 
 %bg-lightblue-interaction {
   &:hover:not(:disabled) {
-    background-color: rgba($interaction-primary-bg, 0.05);
+    background-color: var(--button-lightblue-hover);
   }
 
   &:focus:not(:disabled) {
-    background-color: rgba($interaction-primary-bg, 0.08);
+    background-color: var(--button-lightblue-focus);
   }
 
   &:active:not(:disabled) {
-    background-color: rgba($interaction-primary-bg, 0.12);
-  }
-}
-
-%border-gray-disabled {
-  &:disabled {
-    border-color: var(--interaction-disable);
-    color: var(--line-normal-normal);
+    background-color: var(--button-lightblue-active);
   }
 }
 
 %bg-gray-interaction {
   &:hover:not(:disabled) {
-    background-color: rgba($interaction-secondary-bg, 0.0375);
+    background-color: var(--button-gray-hover);
   }
 
   &:focus:not(:disabled) {
-    background-color: rgba($interaction-secondary-bg, 0.06);
+    background-color: var(--button-gray-focus);
   }
 
   &:active:not(:disabled) {
-    background-color: rgba($interaction-secondary-bg, 0.09);
+    background-color: var(--button-gray-active);
   }
 
-  @extend %border-gray-disabled;
+  &:disabled {
+    border-color: $interaction-disable;
+    color: $line-normal-normal;
+  }
 }
 
 .button {
@@ -72,8 +66,8 @@ $interaction-secondary-bg: $label-normal-light;
 
   // solid
   &--solid-primary {
-    background-color: var(--primary-normal);
-    color: var(--static-white);
+    background-color: $primary-normal;
+    color: $static-white;
 
     &:hover:not(:disabled) {
       filter: brightness(1 - 0.075);
@@ -88,50 +82,54 @@ $interaction-secondary-bg: $label-normal-light;
     }
 
     &:disabled {
-      background-color: var(--interaction-disable);
-      color: var(--label-assistive);
+      background-color: $interaction-disable;
+      color: $label-assistive;
     }
   }
 
   // outlined
   &--outlined-primary {
-    background-color: var(--static-white);
-    color: var(--primary-normal);
-    border: 1px solid var(--primary-normal);
+    background-color: $background-normal-normal;
+    color: $primary-normal;
+    border: 1px solid $primary-normal;
 
     @extend %bg-lightblue-interaction;
-    @extend %border-gray-disabled;
+
+    &:disabled {
+      border-color: $interaction-disable;
+      color: $line-normal-normal;
+    }
   }
 
   &--outlined-secondary {
-    background-color: var(--static-white);
-    color: var(--primary-normal);
-    border: 1px solid var(--line-normal-normal);
+    background-color: $background-normal-normal;
+    color: $primary-normal;
+    border: 1px solid $line-normal-normal;
 
     @extend %bg-gray-interaction;
   }
 
   &--outlined-assistive {
-    background-color: var(--static-white);
-    color: var(--label-normal);
-    border: 1px solid var(--line-normal-normal);
+    background-color: $background-normal-normal;
+    color: $label-normal;
+    border: 1px solid $line-normal-normal;
 
     @extend %bg-gray-interaction;
   }
 
   // text
   &--text-primary {
-    color: var(--primary-normal);
+    color: $primary-normal;
 
     @extend %bg-lightblue-interaction;
 
     &:disabled {
-      color: var(--line-normal-normal);
+      color: $line-normal-normal;
     }
   }
 
   &--text-assistive {
-    color: var(--label-alternative);
+    color: $label-alternative;
 
     @extend %bg-gray-interaction;
   }
