@@ -1,5 +1,12 @@
-@use "../theme/color";
+@use "../theme/color" as *;
+
+$shadow-map: (
+  normal: $shadow-normal,
+  emphasize: $shadow-emphasize,
+  strong: $shadow-strong,
+  heavy: $shadow-heavy,
+);
 
 @mixin shadow($type) {
-  box-shadow: var(--shadow-#{$type});
+  box-shadow: map-get($shadow-map, $type);
 }

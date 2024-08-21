@@ -1,6 +1,10 @@
 @use "./color-light" as *;
 @use "./color-dark" as *;
 
+@function rgba-theme($color, $alpha) {
+  @return rgba(red($color), green($color), blue($color), $alpha);
+}
+
 html[data-theme="light"] {
   --static-white: #{$static-white-light};
   --static-black: #{$static-black-light};
@@ -55,6 +59,14 @@ html[data-theme="light"] {
   --shadow-emphasize: #{$shadow-emphasize-light};
   --shadow-strong: #{$shadow-strong-light};
   --shadow-heavy: #{$shadow-heavy-light};
+
+  --button-lightblue-hover: #{rgba-theme($primary-normal-light, 0.05)};
+  --button-lightblue-focus: #{rgba-theme($primary-normal-light, 0.08)};
+  --button-lightblue-active: #{rgba-theme($primary-normal-light, 0.12)};
+
+  --button-gray-hover: #{rgba-theme($label-normal-light, 0.0375)};
+  --button-gray-focus: #{rgba-theme($label-normal-light, 0.06)};
+  --button-gray-active: #{rgba-theme($label-normal-light, 0.09)};
 }
 
 html[data-theme="dark"] {
@@ -111,4 +123,66 @@ html[data-theme="dark"] {
   --shadow-emphasize: #{$shadow-emphasize-dark};
   --shadow-strong: #{$shadow-strong-dark};
   --shadow-heavy: #{$shadow-heavy-dark};
+
+  --button-lightblue-hover: #{rgba-theme($primary-normal-dark, 0.05)};
+  --button-lightblue-focus: #{rgba-theme($primary-normal-dark, 0.08)};
+  --button-lightblue-active: #{rgba-theme($primary-normal-dark, 0.12)};
+
+  --button-gray-hover: #{rgba-theme($label-normal-dark, 0.0375)};
+  --button-gray-focus: #{rgba-theme($label-normal-dark, 0.06)};
+  --button-gray-active: #{rgba-theme($label-normal-dark, 0.09)};
 }
+
+$static-white: var(--static-white);
+$static-black: var(--static-black);
+
+$primary-normal: var(--primary-normal);
+$primary-strong: var(--primary-strong);
+$primary-heavy: var(--primary-heavy);
+
+$label-normal: var(--label-normal);
+$label-strong: var(--label-strong);
+$label-neutral: var(--label-neutral);
+$label-alternative: var(--label-alternative);
+$label-assistive: var(--label-assistive);
+$label-disable: var(--label-disable);
+
+$background-normal-normal: var(--background-normal-normal);
+$background-normal-alternative: var(--background-normal-alternative);
+$background-elevated-normal: var(--background-elevated-normal);
+$background-elevated-alternative: var(--background-elevated-alternative);
+
+$interaction-inactive: var(--interaction-inactive);
+$interaction-disable: var(--interaction-disable);
+
+$line-normal-normal: var(--line-normal-normal);
+$line-normal-neutral: var(--line-normal-neutral);
+$line-normal-alternative: var(--line-normal-alternative);
+$line-solid-normal: var(--line-solid-normal);
+$line-solid-neutral: var(--line-solid-neutral);
+$line-solid-alternative: var(--line-solid-alternative);
+
+$status-positive: var(--status-positive);
+$status-cautionary: var(--status-cautionary);
+$status-negative: var(--status-negative);
+
+$accent-lime: var(--accent-lime);
+$accent-cyan: var(--accent-cyan);
+$accent-lightBlue: var(--accent-lightBlue);
+$accent-violet: var(--accent-violet);
+$accent-purple: var(--accent-purple);
+$accent-pink: var(--accent-pink);
+
+$inverse-primary: var(--inverse-primary);
+$inverse-background: var(--inverse-background);
+$inverse-label: var(--inverse-label);
+
+$component-fill-normal: var(--component-fill-normal);
+$component-fill-strong: var(--component-fill-strong);
+$component-fill-alternative: var(--component-fill-alternative);
+$component-material-dimmer: var(--component-material-dimmer);
+
+$shadow-normal: var(--shadow-normal);
+$shadow-emphasize: var(--shadow-emphasize);
+$shadow-strong: var(--shadow-strong);
+$shadow-heavy: var(--shadow-heavy);

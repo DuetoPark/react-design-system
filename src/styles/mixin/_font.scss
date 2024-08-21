@@ -1,8 +1,19 @@
 @use "../variables/typography" as *;
-@use "../theme/color";
+@use "../theme/color" as *;
 
-// font(style, weight, color);
+// 사용: font(style, weight, color);
 
+$weight-map: (
+  bold: $font-weight-bold,
+  medium: $font-weight-medium,
+  regular: $font-weight-regular,
+);
+
+@function _get-weight-value($key) {
+  @return map-get($weight-map, $key);
+}
+
+// NOTE: 개별 mixin
 @mixin display-1() {
   font-size: $font-display-1-size;
   line-height: $font-display-1-lineHeight;
@@ -111,20 +122,11 @@
   letter-spaceing: $font-caption-2-letterSpacing;
 }
 
-$weight-map: (
-  bold: $font-weight-bold,
-  medium: $font-weight-medium,
-  regular: $font-weight-regular,
-);
-
-@function _get-weight-value($key) {
-  @return map-get($weight-map, $key);
-}
-
+// NOTE: 폰트 mixin
 @mixin font(
   $style: "body-1-normal",
   $weight: "regular",
-  $color: var(--static-black)
+  $color: $label-normal
 ) {
   @if ($style == "display-1") {
     @include display-1();
