@@ -1,6 +1,4 @@
 @use "../../styles/index.scss" as *;
-@use "../../styles/theme/color-light" as *;
-@use "../../styles/theme/color-dark" as *;
 
 %bg-lightblue-interaction {
   &:hover:not(:disabled) {
@@ -39,8 +37,11 @@
   display: flex;
   align-items: center;
   column-gap: 6px;
-  transition: background-color 150ms ease-in-out, color 150ms ease-in-out,
-    border-color 150ms ease-in-out, filter 150ms ease-in-out;
+  transition:
+    background-color 150ms ease-in-out,
+    color 150ms ease-in-out,
+    border-color 150ms ease-in-out,
+    filter 150ms ease-in-out;
 
   // size
   &--large {
@@ -89,7 +90,7 @@
 
   // outlined
   &--outlined-primary {
-    background-color: $background-normal-normal;
+    background-color: transparent;
     color: $primary-normal;
     border: 1px solid $primary-normal;
 
