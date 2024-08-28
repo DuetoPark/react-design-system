@@ -1,0 +1,55 @@
+@use "../../../styles/index.scss" as *;
+
+$iconSize: (
+  xsmall: 24,
+  small: 32,
+  medium: 40,
+  large: 48,
+  xlarge: 56,
+);
+
+.avatar-wrapper {
+  display: block;
+  overflow: hidden;
+
+  // variant
+  &--person {
+    border-radius: 50% !important;
+  }
+
+  &--company,
+  &--academic {
+    border-radius: 6px;
+  }
+
+  // size
+  @each $key, $val in $iconSize {
+    &--#{$key} {
+      width: #{$val}px;
+      height: #{$val}px;
+
+      @if ($key == medium) {
+        border-radius: 8px;
+      }
+
+      @if ($key == large) {
+        border-radius: 10px;
+      }
+
+      @if ($key == xlarge) {
+        border-radius: 12px;
+      }
+    }
+  }
+
+  // border
+  &--border {
+    border: 1px solid $line-normal-alternative;
+  }
+}
+
+.avatar--fallback {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
