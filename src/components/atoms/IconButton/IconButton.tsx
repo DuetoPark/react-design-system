@@ -22,6 +22,8 @@ interface IconButtonStyleProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void;
   /** 버튼 아이콘 */
   icon: IconName;
+  /** 버튼 푸시 */
+  push?: boolean;
   /** PrimitiveButton의 color 값을 설정하지 않도록 명시 */
   color?: never;
 }
@@ -45,6 +47,7 @@ const IconButton: React.FC<IconButtonStyleProps> = ({
   variant = "normal",
   size = "normal",
   icon,
+  push,
   className,
   disabled,
   onClick,
@@ -66,11 +69,12 @@ const IconButton: React.FC<IconButtonStyleProps> = ({
       onClick={onClick}
       style={{ ...customSize }}
       disabled={disabled}
-      aria-label={label}
+      aria-label={`${label} ${push ? "신규 알림" : ""}`}
       {...props}
     >
       <Icon className="icon-button--icon" icon={icon} {...iconSize} />
-      <span className="icon-button--interaction"></span>
+      {push && <strong className="icon-button--push"></strong>}
+      <span className="icon-button--interaction" aria-hidden></span>
     </PrimitiveButton>
   );
 };

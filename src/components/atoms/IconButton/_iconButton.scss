@@ -42,6 +42,20 @@
     }
   }
 
+  .icon-button--push {
+    $push-size: 4px;
+    $icon-size: 24px;
+    $push-position: ($icon-size - $push-size) / 2;
+
+    @include pos-center();
+    transform: translate($push-position, $push-position * -1);
+    display: block;
+    width: $push-size;
+    height: $push-size;
+    border-radius: 50%;
+    background-color: $primary-normal;
+  }
+
   // variant
   &--solid {
     background-color: $primary-normal;
