@@ -1,0 +1,19 @@
+@use "../../../styles/index.scss" as *;
+
+.avatar-button {
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 150ms ease-in-out;
+
+  &:hover {
+    background-color: var(--button-gray-hover);
+  }
+
+  &:focus {
+    background-color: var(--button-gray-focus);
+  }
+
+  &:active {
+    background-color: var(--button-gray-active);
+  }
+}
