@@ -8,13 +8,14 @@ import AcademicImage from "./assets/academic.svg";
 
 import "./_avatar.scss";
 
-export type variantType = "person" | "company" | "academic";
+export type AvatarVariantType = "person" | "company" | "academic";
+export type AvatarSizeType = "xsmall" | "small" | "medium" | "large" | "xlarge";
 
 export interface AvatarStyleProps {
   /** 아바타 종류 */
-  variant: variantType;
+  variant: AvatarVariantType;
   /** 아바타 크기 */
-  size?: "xsmall" | "small" | "medium" | "large" | "xlarge" | number;
+  size?: AvatarSizeType;
   /** 사용자 이름 */
   userName: string;
   /** 아바타 이미지 경로 */
@@ -23,7 +24,7 @@ export interface AvatarStyleProps {
   className?: string;
 }
 
-const getFallbackImage = (variant: variantType) => {
+const getFallbackImage = (variant: AvatarVariantType) => {
   switch (variant) {
     case "person":
       return PersonImage;
