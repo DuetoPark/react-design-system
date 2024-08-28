@@ -5,6 +5,7 @@ import classNames from "classnames";
 import "./_iconButton.scss";
 
 import Icon, { IconName } from "../Icon/Icon";
+import PushBadge from "../PushBadge";
 
 export type IconButtonVariant = "solid" | "outlined" | "background" | "normal";
 export type IconButtonSize = "normal" | "small" | number;
@@ -69,11 +70,15 @@ const IconButton: React.FC<IconButtonStyleProps> = ({
       onClick={onClick}
       style={{ ...customSize }}
       disabled={disabled}
-      aria-label={`${label} ${push ? "신규 알림" : ""}`}
       {...props}
     >
-      <Icon className="icon-button--icon" icon={icon} {...iconSize} />
-      {push && <strong className="icon-button--push"></strong>}
+      <Icon
+        className="icon-button--icon"
+        icon={icon}
+        label={label}
+        {...iconSize}
+      />
+      {push && <PushBadge className="icon-button--push" />}
       <span className="icon-button--interaction" aria-hidden></span>
     </PrimitiveButton>
   );

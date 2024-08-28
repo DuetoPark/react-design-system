@@ -49,11 +49,6 @@
 
     @include pos-center();
     transform: translate($push-position, $push-position * -1);
-    display: block;
-    width: $push-size;
-    height: $push-size;
-    border-radius: 50%;
-    background-color: $primary-normal;
   }
 
   // variant
