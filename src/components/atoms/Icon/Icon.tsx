@@ -15,7 +15,7 @@ const iconSizeMap = {
 export type IconName = keyof typeof icons;
 export type IconSize = keyof typeof iconSizeMap | number;
 
-export interface SvgIconProps extends SVGProps<SVGSVGElement> {
+export interface IconStyleProps extends SVGProps<SVGSVGElement> {
   /** 아이콘 종류 */
   icon: IconName;
   /** 아이콘 크기 */
@@ -30,7 +30,7 @@ const getSize = (size: IconSize) => {
   return typeof size === "number" ? size : iconSizeMap[size];
 };
 
-const Icon: React.FC<SvgIconProps> = ({
+const Icon: React.FC<IconStyleProps> = ({
   icon,
   size = "normal",
   label,
