@@ -1,0 +1,47 @@
+@use "../../../styles/index.scss" as *;
+
+$item-limit: 5;
+
+$avatarGroupMargin: (
+  xsmall: 6,
+  small: 8,
+);
+
+.avatar-group {
+  display: inline-flex;
+  align-items: center;
+}
+
+.avatar-item {
+  border: 2px solid $background-normal-normal;
+  overflow: hidden;
+
+  @for $i from 1 to $item-limit {
+    &:nth-child(#{$i}) {
+      position: relative;
+      z-index: $item-limit - $i;
+    }
+  }
+
+  * {
+    border: none;
+    border-radius: 0;
+  }
+
+  // variant
+  &--person {
+    border-radius: 50%;
+  }
+
+  &--company,
+  &--academic {
+    border-radius: 6px;
+  }
+
+  // size
+  @each $key, $val in $avatarGroupMargin {
+    &--#{$key} {
+      margin-right: #{$val * -1}px;
+    }
+  }
+}
