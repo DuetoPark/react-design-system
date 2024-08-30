@@ -1,0 +1,80 @@
+@use "../../../../styles/index.scss" as *;
+
+.radio {
+  position: relative;
+  display: block;
+
+  &--box {
+    @include pos-center();
+    box-shadow: 0 0 0 1.5px inset $line-normal-normal;
+    border-radius: 50%;
+    overflow: hidden;
+    color: $label-assistive;
+  }
+
+  &--indicator {
+    @include pos-center();
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-normal;
+    color: $static-white;
+  }
+
+  &--icon {
+    @include pos-center();
+  }
+
+  //size
+  @mixin setSize($radioSize, $boxSize) {
+    width: $radioSize;
+    height: $radioSize;
+
+    .radio--box {
+      width: $boxSize;
+      height: $boxSize;
+    }
+  }
+
+  &--normal {
+    @include setSize(24px, 20px);
+  }
+
+  &--small {
+    @include setSize(20px, 16px);
+  }
+}
+
+// interaction
+.radio--interaction {
+  @include pos-center();
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 150ms ease-in-out;
+}
+
+.radio {
+  &:disabled {
+    opacity: 43%;
+  }
+
+  &:hover:not(:disabled) {
+    .radio--interaction {
+      background-color: var(--checkbox-gray-hover);
+    }
+  }
+
+  &:focus:not(:disabled) {
+    .radio--interaction {
+      background-color: var(--checkbox-gray-focus);
+    }
+  }
+
+  &:active:not(:disabled) {
+    .radio--interaction {
+      background-color: var(--checkbox-gray-active);
+    }
+  }
+}
