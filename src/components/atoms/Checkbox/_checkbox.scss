@@ -1,0 +1,128 @@
+@use "../../../styles/index.scss" as *;
+
+.checkbox {
+  position: relative;
+  display: block;
+
+  &--box {
+    @include pos-center();
+    box-shadow: 0 0 0 1.5px inset $line-normal-normal;
+    border-radius: 3px;
+    overflow: hidden;
+    color: $label-assistive;
+  }
+
+  &--indicator {
+    @include pos-center();
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &--icon {
+    @include pos-center();
+  }
+
+  // variant
+  &--square {
+    .checkbox--indicator {
+      background-color: $primary-normal;
+      color: $static-white;
+    }
+  }
+
+  &--round {
+    .checkbox--box {
+      border-radius: 50%;
+    }
+
+    .checkbox--indicator {
+      background-color: $primary-normal;
+      color: $static-white;
+    }
+  }
+
+  &--ghost {
+    .checkbox--box {
+      box-shadow: none;
+    }
+
+    .checkbox--indicator {
+      color: $primary-normal;
+    }
+  }
+}
+
+// size
+@mixin setSize($checkboxSize, $squareSize, $roundSize) {
+  $checkbox-size: $checkboxSize;
+  $square-box-size: $squareSize;
+  $round-box-size: $roundSize;
+
+  width: $checkbox-size;
+  height: $checkbox-size;
+
+  &.checkbox--square {
+    .checkbox--box {
+      width: $square-box-size;
+      height: $square-box-size;
+    }
+  }
+
+  &.checkbox--round {
+    .checkbox--box {
+      width: $round-box-size;
+      height: $round-box-size;
+    }
+  }
+
+  &.checkbox--ghost {
+    .checkbox--box {
+      width: $checkbox-size;
+      height: $checkbox-size;
+    }
+  }
+}
+
+.checkbox--normal {
+  @include setSize(24px, 18px, 20px);
+}
+
+.checkbox--small {
+  @include setSize(20px, 16px, 18px);
+}
+
+// interaction
+.checkbox--interaction {
+  @include pos-center();
+  z-index: -1;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 150ms ease-in-out;
+}
+
+.checkbox {
+  &:disabled {
+    opacity: 43%;
+  }
+
+  &:hover:not(:disabled) {
+    .checkbox--interaction {
+      background-color: var(--checkbox-gray-hover);
+    }
+  }
+
+  &:focus:not(:disabled) {
+    .checkbox--interaction {
+      background-color: var(--checkbox-gray-focus);
+    }
+  }
+
+  &:active:not(:disabled) {
+    .checkbox--interaction {
+      background-color: var(--checkbox-gray-active);
+    }
+  }
+}

@@ -67,6 +67,10 @@
   --button-gray-hover: #{rgba-theme($label-normal-light, 0.0375)};
   --button-gray-focus: #{rgba-theme($label-normal-light, 0.06)};
   --button-gray-active: #{rgba-theme($label-normal-light, 0.09)};
+
+  --checkbox-gray-hover: #{rgba-theme($label-normal-light, 0.05)};
+  --checkbox-gray-focus: #{rgba-theme($label-normal-light, 0.08)};
+  --checkbox-gray-active: #{rgba-theme($label-normal-light, 0.12)};
 }
 
 .dark {
@@ -131,6 +135,10 @@
   --button-gray-hover: #{rgba-theme($label-normal-dark, 0.0375)};
   --button-gray-focus: #{rgba-theme($label-normal-dark, 0.06)};
   --button-gray-active: #{rgba-theme($label-normal-dark, 0.09)};
+
+  --checkbox-gray-hover: #{rgba-theme($label-normal-dark, 0.05)};
+  --checkbox-gray-focus: #{rgba-theme($label-normal-dark, 0.08)};
+  --checkbox-gray-active: #{rgba-theme($label-normal-dark, 0.12)};
 }
 
 $static-white: var(--static-white);
