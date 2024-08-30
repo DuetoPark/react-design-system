@@ -95,7 +95,6 @@
 // interaction
 .checkbox--interaction {
   @include pos-center();
-  z-index: -1;
   width: 32px;
   height: 32px;
   border-radius: 50%;
