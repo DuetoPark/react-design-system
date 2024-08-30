@@ -1,0 +1,27 @@
+[
+  {
+    "id": "food-apple",
+    "value": "apple",
+    "text": "사과"
+  },
+  {
+    "id": "food-banana",
+    "value": "banana",
+    "text": "바나나"
+  },
+  {
+    "id": "food-orange",
+    "value": "orange",
+    "text": "오렌지"
+  },
+  {
+    "id": "food-grape",
+    "value": "grape",
+    "text": "포도"
+  },
+  {
+    "id": "food-peach",
+    "value": "peach",
+    "text": "복숭아"
+  }
+]
