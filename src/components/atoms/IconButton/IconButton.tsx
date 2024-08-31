@@ -10,7 +10,8 @@ import PushBadge from "../PushBadge";
 export type IconButtonVariant = "solid" | "outlined" | "background" | "normal";
 export type IconButtonSize = "normal" | "small" | number;
 
-interface IconButtonStyleProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface IconButtonStyleProps
+  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "color"> {
   /** 버튼 용도 */
   label: string;
   /** 버튼 종류 */
@@ -25,8 +26,6 @@ interface IconButtonStyleProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon: IconName;
   /** 버튼 푸시 */
   push?: boolean;
-  /** PrimitiveButton의 color 값을 설정하지 않도록 명시 */
-  color?: never;
 }
 
 const BUTTON_PADDING = 8 * 2;
