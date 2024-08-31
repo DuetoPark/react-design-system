@@ -17,7 +17,7 @@ const radioSizeMap = {
 
 export type RadioSizeType = keyof typeof radioSizeMap;
 
-export interface RadioItemProps
+export interface RadioItemDataType
   extends Omit<InputHTMLAttributes<HTMLInputElement>, "size"> {
   /** label과 매칭되는 ID  */
   id: string;
@@ -33,7 +33,9 @@ export interface RadioItemProps
   className?: string;
 }
 
-const Radio: React.FC<Omit<RadioItemProps, "text">> = ({
+export type RadioPropsType = Omit<RadioItemDataType, "text">;
+
+const Radio: React.FC<RadioPropsType> = ({
   id,
   value,
   disabled,
