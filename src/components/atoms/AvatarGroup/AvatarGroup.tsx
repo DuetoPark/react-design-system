@@ -8,11 +8,13 @@ import Avatar, { AvatarStyleProps } from "../Avatar/Avatar";
 export interface AvatarGroupProps {
   /** 아바타 배열 */
   avatars: AvatarStyleProps[];
+  /** 아바타 그룹 클래스명 */
+  className?: string;
 }
 
-const AvatarGroup: React.FC<AvatarGroupProps> = ({ avatars }) => {
+const AvatarGroup: React.FC<AvatarGroupProps> = ({ avatars, className }) => {
   return (
-    <div className="avatar-group">
+    <div className={classNames("avatar-group", className)}>
       {avatars.map(({ ...avatar }) => (
         <div
           key={avatar.userName}

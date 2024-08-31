@@ -1,5 +1,6 @@
 import React, { FormEvent, ReactNode, useState } from "react";
 import * as PrimitiveRadioGroup from "@radix-ui/react-radio-group";
+import classNames from "classnames";
 
 import "./_radioGroup.scss";
 
@@ -18,6 +19,8 @@ export interface RadioGroupProps {
   onChange?: (e?: FormEvent<HTMLInputElement>) => void;
   /** radio 그룹의 custom Children */
   children: ReactNode;
+  /** radio group의 클래스명 */
+  className?: undefined;
 }
 
 const RadioGroup: React.FC<RadioGroupProps> = ({
@@ -28,6 +31,7 @@ const RadioGroup: React.FC<RadioGroupProps> = ({
   loop,
   onChange,
   children,
+  className,
 }) => {
   const [selected, setSelected] = useState<RadioGroupProps["value"]>(value);
 
@@ -38,7 +42,7 @@ const RadioGroup: React.FC<RadioGroupProps> = ({
 
   return (
     <PrimitiveRadioGroup.Root
-      className="radio--group"
+      className={classNames("radio--group", className)}
       value={selected}
       disabled={disabled}
       required={required}

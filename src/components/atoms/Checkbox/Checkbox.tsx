@@ -44,7 +44,9 @@ const Checkbox: React.FC<CheckboxPropsType> = ({
   disabled,
   required,
   name,
+  value,
   onChange,
+  className,
 }) => {
   const [checked, setChecked] = useState<CheckboxStateType>(state);
 
@@ -58,12 +60,14 @@ const Checkbox: React.FC<CheckboxPropsType> = ({
       className={classNames(
         "checkbox",
         `checkbox--${variant}`,
-        `checkbox--${size}`
+        `checkbox--${size}`,
+        className
       )}
       disabled={disabled}
       required={required}
       checked={checked}
       name={name}
+      value={value}
       id={id}
       onCheckedChange={handleChange}
     >
