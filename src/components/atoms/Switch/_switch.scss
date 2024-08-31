@@ -1,0 +1,70 @@
+@use "../../../styles/index.scss" as *;
+
+$switchSize: (
+  small: (
+    thumb: 18,
+    padding: 3,
+    width: 39,
+    height: 24,
+  ),
+  medium: (
+    thumb: 24,
+    padding: 4,
+    width: 52,
+    height: 32,
+  ),
+);
+
+.switch {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: $component-fill-strong;
+  transition: background-color 150ms ease-in-out;
+
+  &--thumb {
+    @include pos-center-y();
+    display: block;
+    border-radius: 50%;
+    background-color: $static-white;
+    transition: transform 150ms ease-in-out;
+  }
+
+  // interaction
+  &:disabled {
+    opacity: 43%;
+  }
+
+  // size
+  @each $size, $map in $switchSize {
+    $thumb-size: #{map-get($map, thumb)}px;
+    $padding-size: #{map-get($map, padding)}px;
+    $width-size: #{map-get($map, width)}px;
+    $height-size: #{map-get($map, height)}px;
+
+    &--#{$size} {
+      width: $width-size;
+      height: $height-size;
+    }
+
+    &--thumb-#{$size} {
+      width: $thumb-size;
+      height: $thumb-size;
+      transform: translate($padding-size, -50%);
+    }
+  }
+
+  // active
+  &[data-state="checked"] {
+    background-color: $primary-normal;
+
+    @each $size, $map in $switchSize {
+      $thumb-size: #{map-get($map, thumb)}px;
+
+      .switch--thumb-#{$size} {
+        transform: translate($thumb-size, -50%);
+      }
+    }
+  }
+}
