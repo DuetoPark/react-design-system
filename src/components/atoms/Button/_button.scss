@@ -1,31 +1,7 @@
 @use "../../../styles/index.scss" as *;
 
-%bg-lightblue-interaction {
-  &:hover:not(:disabled) {
-    background-color: var(--button-lightblue-hover);
-  }
-
-  &:focus:not(:disabled) {
-    background-color: var(--button-lightblue-focus);
-  }
-
-  &:active:not(:disabled) {
-    background-color: var(--button-lightblue-active);
-  }
-}
-
 %bg-gray-interaction {
-  &:hover:not(:disabled) {
-    background-color: var(--button-gray-hover);
-  }
-
-  &:focus:not(:disabled) {
-    background-color: var(--button-gray-focus);
-  }
-
-  &:active:not(:disabled) {
-    background-color: var(--button-gray-active);
-  }
+  @include interaction("gray", "light");
 
   &:disabled {
     border-color: $interaction-disable;
@@ -90,11 +66,10 @@
 
   // outlined
   &--outlined-primary {
+    @include interaction("blue", "normal");
     background-color: transparent;
     color: $primary-normal;
     border: 1px solid $primary-normal;
-
-    @extend %bg-lightblue-interaction;
 
     &:disabled {
       border-color: $interaction-disable;
@@ -120,9 +95,8 @@
 
   // text
   &--text-primary {
+    @include interaction("blue", "normal");
     color: $primary-normal;
-
-    @extend %bg-lightblue-interaction;
 
     &:disabled {
       color: $line-normal-normal;

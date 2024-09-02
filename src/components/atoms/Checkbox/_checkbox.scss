@@ -95,6 +95,7 @@
 // interaction
 .checkbox--interaction {
   @include pos-center();
+  @include interaction("gray", "normal");
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -105,23 +106,5 @@
 .checkbox {
   &:disabled {
     opacity: 43%;
-  }
-
-  &:hover:not(:disabled) {
-    .checkbox--interaction {
-      background-color: var(--checkbox-gray-hover);
-    }
-  }
-
-  &:focus:not(:disabled) {
-    .checkbox--interaction {
-      background-color: var(--checkbox-gray-focus);
-    }
-  }
-
-  &:active:not(:disabled) {
-    .checkbox--interaction {
-      background-color: var(--checkbox-gray-active);
-    }
   }
 }

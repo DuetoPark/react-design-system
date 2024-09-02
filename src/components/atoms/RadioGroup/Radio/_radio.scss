@@ -48,6 +48,8 @@
 // interaction
 .radio--interaction {
   @include pos-center();
+  @include interaction("gray", "normal");
+
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -58,23 +60,5 @@
 .radio {
   &:disabled {
     opacity: 43%;
-  }
-
-  &:hover:not(:disabled) {
-    .radio--interaction {
-      background-color: var(--checkbox-gray-hover);
-    }
-  }
-
-  &:focus:not(:disabled) {
-    .radio--interaction {
-      background-color: var(--checkbox-gray-focus);
-    }
-  }
-
-  &:active:not(:disabled) {
-    .radio--interaction {
-      background-color: var(--checkbox-gray-active);
-    }
   }
 }
