@@ -1,6 +1,6 @@
 import React, { SVGProps } from "react";
 
-import "./icon.scss";
+import "./_icon.scss";
 
 import { icons } from "./icons";
 
