@@ -60,17 +60,29 @@
   --shadow-strong: #{$shadow-strong-light};
   --shadow-heavy: #{$shadow-heavy-light};
 
-  --button-lightblue-hover: #{rgba-theme($primary-normal-light, 0.05)};
-  --button-lightblue-focus: #{rgba-theme($primary-normal-light, 0.08)};
-  --button-lightblue-active: #{rgba-theme($primary-normal-light, 0.12)};
+  --interaction-light-hover-blue: #{rgba-theme($primary-normal-light, 0.0375)};
+  --interaction-light-focus-blue: #{rgba-theme($primary-normal-light, 0.06)};
+  --interaction-light-active-blue: #{rgba-theme($primary-normal-light, 0.09)};
 
-  --button-gray-hover: #{rgba-theme($label-normal-light, 0.0375)};
-  --button-gray-focus: #{rgba-theme($label-normal-light, 0.06)};
-  --button-gray-active: #{rgba-theme($label-normal-light, 0.09)};
+  --interaction-normal-hover-blue: #{rgba-theme($primary-normal-light, 0.05)};
+  --interaction-normal-focus-blue: #{rgba-theme($primary-normal-light, 0.08)};
+  --interaction-normal-active-blue: #{rgba-theme($primary-normal-light, 0.12)};
 
-  --checkbox-gray-hover: #{rgba-theme($label-normal-light, 0.05)};
-  --checkbox-gray-focus: #{rgba-theme($label-normal-light, 0.08)};
-  --checkbox-gray-active: #{rgba-theme($label-normal-light, 0.12)};
+  --interaction-strong-hover-blue: #{rgba-theme($primary-normal-light, 0.075)};
+  --interaction-strong-focus-blue: #{rgba-theme($primary-normal-light, 0.12)};
+  --interaction-strong-active-blue: #{rgba-theme($primary-normal-light, 0.18)};
+
+  --interaction-light-hover-gray: #{rgba-theme($label-normal-light, 0.0375)};
+  --interaction-light-focus-gray: #{rgba-theme($label-normal-light, 0.06)};
+  --interaction-light-active-gray: #{rgba-theme($label-normal-light, 0.09)};
+
+  --interaction-normal-hover-gray: #{rgba-theme($label-normal-light, 0.05)};
+  --interaction-normal-focus-gray: #{rgba-theme($label-normal-light, 0.08)};
+  --interaction-normal-active-gray: #{rgba-theme($label-normal-light, 0.12)};
+
+  --interaction-strong-hover-gray: #{rgba-theme($label-normal-light, 0.075)};
+  --interaction-strong-focus-gray: #{rgba-theme($label-normal-light, 0.12)};
+  --interaction-strong-active-gray: #{rgba-theme($label-normal-light, 0.18)};
 }
 
 .dark {
@@ -128,17 +140,17 @@
   --shadow-strong: #{$shadow-strong-dark};
   --shadow-heavy: #{$shadow-heavy-dark};
 
-  --button-lightblue-hover: #{rgba-theme($primary-normal-dark, 0.05)};
-  --button-lightblue-focus: #{rgba-theme($primary-normal-dark, 0.08)};
-  --button-lightblue-active: #{rgba-theme($primary-normal-dark, 0.12)};
+  --interaction-light-hover: #{rgba-theme($label-normal-dark, 0.0375)};
+  --interaction-light-focus: #{rgba-theme($label-normal-dark, 0.06)};
+  --interaction-light-active: #{rgba-theme($label-normal-dark, 0.09)};
 
-  --button-gray-hover: #{rgba-theme($label-normal-dark, 0.0375)};
-  --button-gray-focus: #{rgba-theme($label-normal-dark, 0.06)};
-  --button-gray-active: #{rgba-theme($label-normal-dark, 0.09)};
+  --interaction-normal-hover: #{rgba-theme($label-normal-dark, 0.05)};
+  --interaction-normal-focus: #{rgba-theme($label-normal-dark, 0.08)};
+  --interaction-normal-active: #{rgba-theme($label-normal-dark, 0.12)};
 
-  --checkbox-gray-hover: #{rgba-theme($label-normal-dark, 0.05)};
-  --checkbox-gray-focus: #{rgba-theme($label-normal-dark, 0.08)};
-  --checkbox-gray-active: #{rgba-theme($label-normal-dark, 0.12)};
+  --interaction-strong-hover: #{rgba-theme($label-normal-dark, 0.075)};
+  --interaction-strong-focus: #{rgba-theme($label-normal-dark, 0.12)};
+  --interaction-strong-active: #{rgba-theme($label-normal-dark, 0.18)};
 }
 
 $static-white: var(--static-white);

@@ -1,0 +1,115 @@
+@use "../theme/color" as *;
+
+@mixin interaction-light-blue {
+  &:hover:not(:disabled) {
+    background-color: var(--interaction-light-hover-blue);
+  }
+
+  &:focus:not(:disabled) {
+    background-color: var(--interaction-light-focus-blue);
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(--interaction-light-active-blue);
+  }
+}
+
+@mixin interaction-normal-blue {
+  &:hover:not(:disabled) {
+    background-color: var(--interaction-normal-hover-blue);
+  }
+
+  &:focus:not(:disabled) {
+    background-color: var(--interaction-normal-focus-blue);
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(--interaction-normal-active-blue);
+  }
+}
+
+@mixin interaction-strong-blue {
+  &:hover:not(:disabled) {
+    background-color: var(--interaction-strong-hover-blue);
+  }
+
+  &:focus:not(:disabled) {
+    background-color: var(--interaction-strong-focus-blue);
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(--interaction-strong-active-blue);
+  }
+}
+
+@mixin interaction-light-gray {
+  &:hover:not(:disabled) {
+    background-color: var(--interaction-light-hover-gray);
+  }
+
+  &:focus:not(:disabled) {
+    background-color: var(--interaction-light-focus-gray);
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(--interaction-light-active-gray);
+  }
+}
+
+@mixin interaction-normal-gray {
+  &:hover:not(:disabled) {
+    background-color: var(--interaction-normal-hover-gray);
+  }
+
+  &:focus:not(:disabled) {
+    background-color: var(--interaction-normal-focus-gray);
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(--interaction-normal-active-gray);
+  }
+}
+
+@mixin interaction-strong-gray {
+  &:hover:not(:disabled) {
+    background-color: var(--interaction-strong-hover-gray);
+  }
+
+  &:focus:not(:disabled) {
+    background-color: var(--interaction-strong-focus-gray);
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(--interaction-strong-active-gray);
+  }
+}
+
+@mixin interaction($color, $variant) {
+  @if ($color == "blue") {
+    @if ($variant == "light") {
+      @include interaction-light-blue();
+    }
+
+    @if ($variant == "normal") {
+      @include interaction-normal-blue();
+    }
+
+    @if ($variant == "strong") {
+      @include interaction-strong-blue();
+    }
+  }
+
+  @if ($color == "gray") {
+    @if ($variant == "light") {
+      @include interaction-light-gray();
+    }
+
+    @if ($variant == "normal") {
+      @include interaction-normal-gray();
+    }
+
+    @if ($variant == "strong") {
+      @include interaction-strong-gray();
+    }
+  }
+}
