@@ -1,0 +1,45 @@
+@use "../../../styles/index.scss" as *;
+
+$divider-normal: 1px;
+$divider-thick: 12px;
+
+@function getDividerSize($size) {
+  @if ($size == "thick") {
+    @return $divider-thick;
+  }
+
+  @return $divider-normal;
+}
+
+@mixin divider($orientation, $size) {
+  @if ($orientation == "horizontal") {
+    width: 100%;
+    height: getDividerSize($size);
+  }
+
+  @if ($orientation == "vertical") {
+    width: getDividerSize($size);
+    height: 100%;
+  }
+}
+
+.divider {
+  background-color: $line-normal-alternative;
+
+  // orientation
+  &--horizontal-normal {
+    @include divider("horizontal", "normal");
+  }
+
+  &--horizontal-thick {
+    @include divider("horizontal", "thick");
+  }
+
+  &--vertical-normal {
+    @include divider("vertical", "normal");
+  }
+
+  &--vertical-thick {
+    @include divider("vertical", "thick");
+  }
+}
