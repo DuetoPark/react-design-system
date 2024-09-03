@@ -1,0 +1,9 @@
+@use "../../../styles/index.scss" as *;
+
+.toggle-icon-button {
+  color: $label-assistive;
+
+  &--active {
+    color: $primary-normal;
+  }
+}

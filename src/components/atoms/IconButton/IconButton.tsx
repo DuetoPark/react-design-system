@@ -10,7 +10,7 @@ import PushBadge from "../PushBadge";
 export type IconButtonVariant = "solid" | "outlined" | "background" | "normal";
 export type IconButtonSize = "normal" | "small" | number;
 
-interface IconButtonStyleProps
+export interface IconButtonStyleProps
   extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "color"> {
   /** 버튼 용도 */
   label: string;
