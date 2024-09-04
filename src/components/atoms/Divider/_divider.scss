@@ -3,6 +3,7 @@
 $divider-normal: 1px;
 $divider-thick: 12px;
 
+// size
 @function getDividerSize($size) {
   @if ($size == "thick") {
     @return $divider-thick;
@@ -11,6 +12,7 @@ $divider-thick: 12px;
   @return $divider-normal;
 }
 
+// orientation
 @mixin divider($orientation, $size) {
   @if ($orientation == "horizontal") {
     width: 100%;
@@ -26,7 +28,6 @@ $divider-thick: 12px;
 .divider {
   background-color: $line-normal-alternative;
 
-  // orientation
   &--horizontal-normal {
     @include divider("horizontal", "normal");
   }
