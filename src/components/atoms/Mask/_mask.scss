@@ -1,0 +1,22 @@
+@use "../../../styles/index.scss" as *;
+
+.mask {
+  width: 100%;
+  height: 100%;
+
+  &--top {
+    @include gradient("top");
+  }
+
+  &--right {
+    @include gradient("right");
+  }
+
+  &--bottom {
+    @include gradient("bottom");
+  }
+
+  &--left {
+    @include gradient("left");
+  }
+}
