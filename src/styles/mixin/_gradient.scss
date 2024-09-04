@@ -1,0 +1,42 @@
+@use "../theme/color" as *;
+
+$gradientRotateMap: (
+  top: 180,
+  right: -90,
+  bottom: 0,
+  left: 90,
+);
+
+@function getGradientRotate($rotate) {
+  @if (type-of($rotate) == string) {
+    @return map-get($gradientRotateMap, $rotate);
+  }
+
+  @if (type-of($rotate) == number) {
+    @return $rotate;
+  }
+}
+
+@function getEndColor($type, $endColor) {
+  @if ($type == single) {
+    @return "transparent";
+  }
+
+  @if ($type == multiple) {
+    @return $endColor;
+  }
+}
+
+@mixin gradient(
+  $rotate: 0,
+  $type: "single",
+  $startColor: #fff,
+  $endColor: transparent
+) {
+  background: $startColor;
+  background: linear-gradient(
+    #{getGradientRotate($rotate)}deg,
+    $startColor 0%,
+    #{getEndColor($type, $endColor)} 100%
+  );
+}
