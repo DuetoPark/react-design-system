@@ -1,0 +1,20 @@
+@use "../variables/breakpoint" as *;
+
+@mixin responsive($screen) {
+  @if ($screen == "tablet") {
+    @media screen and (min-width: $sm-start) {
+      @content;
+    }
+  }
+  @if ($screen == "desktop") {
+    @media screen and (min-width: $md-start) {
+      @content;
+    }
+  }
+}
+
+@mixin mobile-only() {
+  @media screen and (max-width: $sm-start - 1px) {
+    @content;
+  }
+}
