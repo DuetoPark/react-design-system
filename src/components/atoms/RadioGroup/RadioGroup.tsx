@@ -1,10 +1,10 @@
-import React, { FormEvent, ReactNode, useState } from "react";
+import React, { FormEvent, PropsWithChildren, useState } from "react";
 import * as PrimitiveRadioGroup from "@radix-ui/react-radio-group";
 import classNames from "classnames";
 
 import "./_radioGroup.scss";
 
-export interface RadioGroupProps {
+export interface RadioGroupProps extends PropsWithChildren {
   /** radio group 값 */
   value?: string;
   /** radio 상호작용 */
@@ -17,8 +17,6 @@ export interface RadioGroupProps {
   loop?: boolean;
   /** radio 이벤트 */
   onChange?: (e?: FormEvent<HTMLInputElement>) => void;
-  /** radio 그룹의 custom Children */
-  children: ReactNode;
   /** radio group의 클래스명 */
   className?: undefined;
 }
@@ -51,7 +49,7 @@ const RadioGroup: React.FC<RadioGroupProps> = ({
       onValueChange={handleValueChange}
       asChild
     >
-      {children}
+      <>{children}</>
     </PrimitiveRadioGroup.Root>
   );
 };
