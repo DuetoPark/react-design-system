@@ -1,8 +1,9 @@
 @use "../../../styles/index.scss" as *;
 
 .avatar-button {
-  @include interaction("gray", "light");
   padding: 8px;
   border-radius: 50%;
   transition: background-color 150ms ease-in-out;
+
+  @include interaction("gray", "light");
 }
