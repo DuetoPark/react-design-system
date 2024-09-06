@@ -1,0 +1,54 @@
+@use "sass:math";
+@use "../../../styles/index.scss" as *;
+
+$gutter: 20px;
+$grid-margin: 10px;
+$grid-max-container: 1100px;
+
+// xs (<768, mobile)
+$xs-columns: 2;
+
+// sm (<992, tablet)
+$sm-columns: 3;
+
+// md (>=992, desktop)
+$md-columns: 12;
+
+.container {
+  width: 100%;
+  max-width: $grid-max-container;
+  padding: 0 $grid-margin;
+  margin: 0 auto;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  [class^="col-"] {
+    padding: 0 math.div($gutter, 2);
+  }
+
+  @for $i from 1 through $xs-columns {
+    .col-xs-#{$i} {
+      width: percentage(math.div($i, $xs-columns));
+    }
+  }
+
+  @include responsive("tablet") {
+    @for $i from 1 through $sm-columns {
+      .col-sm-#{$i} {
+        width: percentage(math.div($i, $sm-columns));
+      }
+    }
+  }
+
+  @include responsive("desktop") {
+    @for $i from 1 through $md-columns {
+      .col-md-#{$i} {
+        width: percentage(math.div($i, $md-columns));
+      }
+    }
+  }
+}
