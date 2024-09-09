@@ -1,9 +1,16 @@
 import React from "react";
+import classNames from "classnames";
 
 import "./_overlay.scss";
 
-const Overlay: React.FC = () => {
-  return <div className="overlay" aria-hidden={true}></div>;
+interface OverlayPropsType {
+  className?: string;
+}
+
+const Overlay: React.FC<OverlayPropsType> = ({ className }) => {
+  return (
+    <div className={classNames("overlay", className)} aria-hidden={true}></div>
+  );
 };
 
 export default Overlay;
