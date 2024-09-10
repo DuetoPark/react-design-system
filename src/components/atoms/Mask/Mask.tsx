@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, PropsWithChildren } from "react";
+import React, { HTMLAttributes } from "react";
 import classNames from "classnames";
 
 import "./_mask.scss";
