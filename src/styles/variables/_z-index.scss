@@ -3,6 +3,6 @@ $unit-10: 10;
 
 $popup-level: $unit-100 * 1;
 $cta-level: $unit-100 * 2;
-$modal-level: $unit-100 * 3;
-$dim-level: $modal-level - 10;
 $toast-level: $unit-100 * 4;
+$modal-level: $unit-100 * 10;
+$dim-level: $modal-level - 10;

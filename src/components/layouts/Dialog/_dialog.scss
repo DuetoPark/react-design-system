@@ -1,0 +1,47 @@
+@use "../../../styles/index.scss" as *;
+
+.dialog--overlay {
+  backdrop-filter: blur(4px);
+}
+
+.dialog--header {
+  position: relative;
+  height: 54px;
+
+  &-title {
+    @include pos-center();
+    @include font("body-1-normal", bold, #333);
+  }
+
+  .dialog--header-close {
+    @include pos-center-y();
+    right: 5px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.dialog--content {
+  @include pos-center(fixed);
+  background-color: white;
+
+  &-notice {
+    $dialog-margin: 36px;
+
+    z-index: $modal-level;
+    width: calc(100% - $dialog-margin * 2);
+    max-width: 360px;
+    border-radius: 12px;
+  }
+
+  &-normal {
+    z-index: $modal-level;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 4px;
+  }
+}
+
+.dialog--body {
+  padding: 20px;
+}
