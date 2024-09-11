@@ -2,85 +2,85 @@
 
 @mixin interaction-light-blue {
   &:hover:not(:disabled) {
-    background-color: var(--interaction-light-hover-blue);
+    background-color: $interaction-light-hover-blue;
   }
 
   &:focus:not(:disabled) {
-    background-color: var(--interaction-light-focus-blue);
+    background-color: $interaction-light-focus-blue;
   }
 
   &:active:not(:disabled) {
-    background-color: var(--interaction-light-active-blue);
+    background-color: $interaction-light-active-blue;
   }
 }
 
 @mixin interaction-normal-blue {
   &:hover:not(:disabled) {
-    background-color: var(--interaction-normal-hover-blue);
+    background-color: $interaction-normal-hover-blue;
   }
 
   &:focus:not(:disabled) {
-    background-color: var(--interaction-normal-focus-blue);
+    background-color: $interaction-normal-focus-blue;
   }
 
   &:active:not(:disabled) {
-    background-color: var(--interaction-normal-active-blue);
+    background-color: $interaction-normal-active-blue;
   }
 }
 
 @mixin interaction-strong-blue {
   &:hover:not(:disabled) {
-    background-color: var(--interaction-strong-hover-blue);
+    background-color: $interaction-strong-hover-blue;
   }
 
   &:focus:not(:disabled) {
-    background-color: var(--interaction-strong-focus-blue);
+    background-color: $interaction-strong-focus-blue;
   }
 
   &:active:not(:disabled) {
-    background-color: var(--interaction-strong-active-blue);
+    background-color: $interaction-strong-active-blue;
   }
 }
 
 @mixin interaction-light-gray {
   &:hover:not(:disabled) {
-    background-color: var(--interaction-light-hover-gray);
+    background-color: $interaction-light-hover-gray;
   }
 
   &:focus:not(:disabled) {
-    background-color: var(--interaction-light-focus-gray);
+    background-color: $interaction-light-focus-gray;
   }
 
   &:active:not(:disabled) {
-    background-color: var(--interaction-light-active-gray);
+    background-color: $interaction-light-active-gray;
   }
 }
 
 @mixin interaction-normal-gray {
   &:hover:not(:disabled) {
-    background-color: var(--interaction-normal-hover-gray);
+    background-color: $interaction-normal-hover-gray;
   }
 
   &:focus:not(:disabled) {
-    background-color: var(--interaction-normal-focus-gray);
+    background-color: $interaction-normal-focus-gray;
   }
 
   &:active:not(:disabled) {
-    background-color: var(--interaction-normal-active-gray);
+    background-color: $interaction-normal-active-gray;
   }
 }
 
 @mixin interaction-strong-gray {
   &:hover:not(:disabled) {
-    background-color: var(--interaction-strong-hover-gray);
+    background-color: $interaction-strong-hover-gray;
   }
 
   &:focus:not(:disabled) {
-    background-color: var(--interaction-strong-focus-gray);
+    background-color: $interaction-strong-focus-gray;
   }
 
   &:active:not(:disabled) {
-    background-color: var(--interaction-strong-active-gray);
+    background-color: $interaction-strong-active-gray;
   }
 }
 
