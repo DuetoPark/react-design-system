@@ -80,7 +80,7 @@
   }
 
   &--outlined-secondary {
-    background-color: $background-normal-normal;
+    background-color: transparent;
     color: $primary-normal;
     border: 1px solid $line-normal-normal;
 
@@ -88,7 +88,7 @@
   }
 
   &--outlined-assistive {
-    background-color: $background-normal-normal;
+    background-color: transparent;
     color: $label-normal;
     border: 1px solid $line-normal-normal;
 
