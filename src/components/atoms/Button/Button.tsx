@@ -3,7 +3,7 @@ import { Button as PrimitiveButton } from "@radix-ui/themes";
 
 import "./_button.scss";
 
-interface CommonButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonAttrProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /** 버튼 비활성화 */
   disabled?: boolean;
   /** 버튼 클릭 리스너 */
@@ -12,33 +12,41 @@ interface CommonButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: string | ReactNode;
 }
 
-interface SolidButtonStyle extends CommonButtonProps {
-  /** 버튼 종류 */
-  variant?: "solid";
+interface SolidButtonStyle {
   /** 버튼 테마 */
   color?: "primary";
   /** 버튼 크기 */
   size?: "large" | "medium" | "small";
 }
 
-interface OutlinedButtonStyle extends CommonButtonProps {
-  variant?: "outlined";
+interface OutlinedButtonStyle {
+  /** 버튼 테마 */
   color?: "primary" | "secondary" | "assistive";
+  /** 버튼 크기 */
   size?: "large" | "medium" | "small";
 }
 
-interface TextButtonStyle extends CommonButtonProps {
-  variant?: "text";
+interface TextButtonStyle {
+  /** 버튼 테마 */
   color?: "primary" | "assistive";
+  /** 버튼 크기 */
   size?: "medium" | "small";
 }
 
-type ButtonStyleProps =
-  | SolidButtonStyle
-  | OutlinedButtonStyle
-  | TextButtonStyle;
+interface ButtonVariantType {
+  /** 버튼 종류 */
+  variant?: "solid" | "outlined" | "text";
+}
 
-const Button: React.FC<ButtonStyleProps> = ({
+// 조건부 타입
+type ButtonStyleType<T extends ButtonVariantType["variant"]> = T extends "solid"
+  ? SolidButtonStyle
+  : T extends "outlined"
+    ? OutlinedButtonStyle
+    : TextButtonStyle;
+
+// 제네릭 타입
+const Button = <T extends ButtonVariantType["variant"]>({
   variant = "solid",
   color = "primary",
   size = "medium",
@@ -46,7 +54,7 @@ const Button: React.FC<ButtonStyleProps> = ({
   onClick,
   children,
   ...props
-}) => {
+}: ButtonAttrProps & ButtonStyleType<T> & { variant?: T }) => {
   return (
     <PrimitiveButton
       className={`button button--${variant}-${color} button--${size}`}
