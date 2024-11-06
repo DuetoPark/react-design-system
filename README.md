@@ -12,6 +12,7 @@
 
 ## 요약
 
+- 링크: [storybook 배포 페이지](https://672b99b618065f759d3ae16e-lyfkzljnvx.chromatic.com/?path=/docs/atoms-avatar--docs)
 - 시작: 2024.08.15 ~ 2024.09.13
 - 규모: 개인 프로젝트
 - 목적
