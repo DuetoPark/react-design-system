@@ -58,6 +58,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:16.18.105"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
+          ["chromatic", "virtual:65ff7b00ff6729bfd9a8dab7a467e29f2895cc87d926979512855e87cbf862b4f9ca4dc6743192ea73b0ec924cf2a7b7f38f975600de5274ac8336a3ad87613a#npm:11.16.5"],\
           ["classnames", "npm:2.5.1"],\
           ["css-loader", "virtual:65ff7b00ff6729bfd9a8dab7a467e29f2895cc87d926979512855e87cbf862b4f9ca4dc6743192ea73b0ec924cf2a7b7f38f975600de5274ac8336a3ad87613a#npm:7.1.2"],\
           ["eslint", "npm:8.57.1"],\
@@ -12853,6 +12854,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["chromatic", [\
+      ["npm:11.16.5", {\
+        "packageLocation": "../../../.yarn/berry/cache/chromatic-npm-11.16.5-c2fcfd1356-10c0.zip/node_modules/chromatic/",\
+        "packageDependencies": [\
+          ["chromatic", "npm:11.16.5"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["npm:11.7.1", {\
         "packageLocation": "../../../.yarn/berry/cache/chromatic-npm-11.7.1-fae7effe97-10c0.zip/node_modules/chromatic/",\
         "packageDependencies": [\
@@ -12864,6 +12872,23 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/chromatic-virtual-5a75660e3a/4/.yarn/berry/cache/chromatic-npm-11.7.1-fae7effe97-10c0.zip/node_modules/chromatic/",\
         "packageDependencies": [\
           ["chromatic", "virtual:5fb7719611ba23f85a5d77cb9e9479fd460f9110ffaed16c92c64a6eae0fccb623afea8d4a7b697ff35dc63bafae07500a17c7b29e3b89a3585517809943e88a#npm:11.7.1"],\
+          ["@chromatic-com/cypress", null],\
+          ["@chromatic-com/playwright", null],\
+          ["@types/chromatic-com__cypress", null],\
+          ["@types/chromatic-com__playwright", null]\
+        ],\
+        "packagePeers": [\
+          "@chromatic-com/cypress",\
+          "@chromatic-com/playwright",\
+          "@types/chromatic-com__cypress",\
+          "@types/chromatic-com__playwright"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:65ff7b00ff6729bfd9a8dab7a467e29f2895cc87d926979512855e87cbf862b4f9ca4dc6743192ea73b0ec924cf2a7b7f38f975600de5274ac8336a3ad87613a#npm:11.16.5", {\
+        "packageLocation": "./.yarn/__virtual__/chromatic-virtual-e33d0251fa/4/.yarn/berry/cache/chromatic-npm-11.16.5-c2fcfd1356-10c0.zip/node_modules/chromatic/",\
+        "packageDependencies": [\
+          ["chromatic", "virtual:65ff7b00ff6729bfd9a8dab7a467e29f2895cc87d926979512855e87cbf862b4f9ca4dc6743192ea73b0ec924cf2a7b7f38f975600de5274ac8336a3ad87613a#npm:11.16.5"],\
           ["@chromatic-com/cypress", null],\
           ["@chromatic-com/playwright", null],\
           ["@types/chromatic-com__cypress", null],\
@@ -22445,6 +22470,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:16.18.105"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
+          ["chromatic", "virtual:65ff7b00ff6729bfd9a8dab7a467e29f2895cc87d926979512855e87cbf862b4f9ca4dc6743192ea73b0ec924cf2a7b7f38f975600de5274ac8336a3ad87613a#npm:11.16.5"],\
           ["classnames", "npm:2.5.1"],\
           ["css-loader", "virtual:65ff7b00ff6729bfd9a8dab7a467e29f2895cc87d926979512855e87cbf862b4f9ca4dc6743192ea73b0ec924cf2a7b7f38f975600de5274ac8336a3ad87613a#npm:7.1.2"],\
           ["eslint", "npm:8.57.1"],\
