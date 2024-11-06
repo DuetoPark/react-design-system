@@ -1,5 +1,15 @@
 # **Design-system 프로젝트**
 
+<img width="1680" alt="스크린샷 2024-11-07 오전 1 18 50" src="https://github.com/user-attachments/assets/32146090-a9ba-4ebb-aa41-3c41b333a3ad">
+
+## 코드실행
+
+```
+> yarn install
+
+> yarn storybook
+```
+
 ## 요약
 
 - 시작: 2024.08.15 ~ 2024.09.13
@@ -29,8 +39,8 @@
   - `Javascript & Typescript`
   - 이유: ts의 자동 타입 유추 기능과 vscode의 인텔리전스를 사용하여 안정적으로 코드를 구현하기 위함
 - 패키지 매니저
-  - `yarn`
-  - 이유: log 메세지가 직관적이고 npm보다 빠르기 때문에 사용
+  - `yarn berry`
+  - 이유: pnp로 프로젝트를 경량화 함
 - 테스트와 문서화
   - `Storybook`
   - 이유: 컴포넌트를 만들때 바로바로 테스트하며 제작하기 위함
@@ -310,9 +320,7 @@ $white: #ffffff;
   font-weight: 500;
   border-radius: 0.375rem;
   cursor: pointer;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 
   &:focus {
     outline: 2px solid transparent;
@@ -1051,10 +1059,10 @@ interface ButtonVariantType {
 type ButtonStyleType<T extends ButtonVariantType["variant"]> = T extends "solid"
   ? SolidButtonStyle
   : T extends "outlined"
-    ? OutlinedButtonStyle
-    : T extends "text"
-      ? TextButtonStyle
-      : never;
+  ? OutlinedButtonStyle
+  : T extends "text"
+  ? TextButtonStyle
+  : never;
 
 // 제네릭 타입
 const Button = <T extends ButtonVariantType["variant"]>({
